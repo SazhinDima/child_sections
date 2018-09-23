@@ -72,7 +72,7 @@ class Home extends Component {
             <TouchableHighlight onPress={() => this.showOptions(item)} underlayColor='rgba(0,0,0,.2)'>
                 <View style={styles.row}>
                     <Text style={styles.quote}>
-                        {item.quote}
+                        {item.author}
                     </Text>
                     <Text style={styles.author}>
                         {item.author}
