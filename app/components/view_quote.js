@@ -34,18 +34,6 @@ class ViewQuote extends Component {
 export default connect(null, null)(ViewQuote);
 
 var styles = StyleSheet.create({
-    saveBtn:{
-        width: windowWidth,
-        height: 44,
-        justifyContent: "center",
-        alignItems: 'center',
-        backgroundColor:"#6B9EFA"
-    },
-
-    buttonText:{
-        fontWeight: "500",
-    },
-
     quote: {
         fontSize: 17,
         lineHeight: 38,
