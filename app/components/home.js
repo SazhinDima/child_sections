@@ -75,7 +75,7 @@ class Home extends Component {
                         {item.quote}
                     </Text>
                     <Text style={styles.author}>
-                        {item.author} + '1'
+                        {item.author}
                     </Text>
                 </View>
             </TouchableHighlight>
