@@ -1,0 +1,35 @@
+{
+  "sections": [
+    {
+      "id": 1,
+      "latitude": 55.807244,
+      "longitude": 37.613423,
+      "type": "sport",
+      "description": "Спортивная секция 1"
+    },
+    {
+      "id": 2,
+      "latitude": 55.791244,
+      "longitude": 37.615423,
+      "type": "art",
+      "description": "Художественная школа"
+    },
+    {
+      "id": 3,
+      "latitude": 55.796244,
+      "longitude": 37.619423,
+      "type": "sport",
+      "description": "Спортивная секция 2"
+    }
+  ], 
+  "types": [
+    {
+      "code": "sport",
+      "value": "Sport"
+    },
+    {
+      "code": "art",
+      "value": "Art"
+    },
+  ]
+}

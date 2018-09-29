@@ -1,5 +1,19 @@
 {
   "expo": {
-    "sdkVersion": "25.0.0"
+   "name": "Child sections",
+   "version": "1.0.0",
+   "slug": "child-sections",
+   "sdkVersion": "25.0.0",
+   "ios": {
+     "bundleIdentifier": "com.sazhin"
+   },
+   "android": {
+     "package": "com.sazhin",
+	 "config": {
+	   "googleMaps": {
+	     "apiKey": "AIzaSyDElqRn815KolcLI2gwWFE0KtEMW-JTQKA"
+	   }
+	 }
+    }
   }
 }

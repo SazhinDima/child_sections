@@ -3,26 +3,28 @@ import { View, AsyncStorage } from 'react-native';
 
 import { Router, Scene } from 'react-native-router-flux';
 
-import Home from './components/home'
-import NewQuote from './components/new_quote'
-import ViewQuote from './components/view_quote'
+import Map from './components/map'
+import ViewSection from './components/view'
+import Chat from './components/chat'
 
-import Data from './quotes.json'
+import Data from './sections.json'
 
 import {connect} from 'react-redux';
-import { getQuotes } from './actions'
+import { getSections, getTypes } from './actions'
 
 class Main extends Component {
 
     componentDidMount() {
         var _this = this;
+        AsyncStorage.clear();
         //Check if any data exist
-        AsyncStorage.getItem('data', (err, data) => {
+        AsyncStorage.getItem('sections', (err, data) => {
             //if it doesn't exist, extract from json file
             //save the initial data in Async
             if (data === null){
-                AsyncStorage.setItem('data', JSON.stringify(Data.quotes));
-                _this.props.getQuotes();
+                AsyncStorage.setItem('sections', JSON.stringify(Data.sections));
+                AsyncStorage.setItem('types', JSON.stringify(Data.types));
+                _this.props.getSections();
             }
         });
     }
@@ -31,9 +33,9 @@ class Main extends Component {
         return (
             <Router>
                 <Scene key="root">
-                    <Scene key="home" component={Home} title="Home" initial/>
-                    <Scene key="new_quote" component={NewQuote} title="New Quote"/>
-                    <Scene key="view_quote" component={ViewQuote} title="View Quote"/>
+                    <Scene key="map" component={Map} title="Map" initial/>
+                    <Scene key="view" component={ViewSection} title="View"/>
+                    <Scene key="chat" component={Chat} title="Chat"/>
                 </Scene>
             </Router>
         );
@@ -41,4 +43,4 @@ class Main extends Component {
 }
 
 //Connect everything
-export default connect(null, { getQuotes })(Main);
+export default connect(null, { getSections, getTypes })(Main);
